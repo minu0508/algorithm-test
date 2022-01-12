@@ -1,0 +1,77 @@
+####### 1번 문제 #######
+a = int(input("점수를 입력하세요: "))
+
+if ( 100 < a ):
+        print("입력값이 올바르지 않습니다.")
+elif ( 96 <= a ):
+    print("A+")
+elif ( 91 <= a ):
+    print("A")
+elif ( 86 <= a ):
+    print("B+")
+elif ( 81 <= a ):
+    print("B")
+elif ( 76 <= a ):
+    print("C+")
+elif ( 71 <= a ):
+    print("C")
+elif ( 66 <= a ):
+    print("D+")
+elif ( 61 <= a ):
+    print("D")
+elif ( 0 <= a ):
+    print("F")
+else:
+    print("입력값이 올바르지 않습니다."a = int(input("등산한 시간(초)을 입력하세요: "))
+ 
+####### 2번 문제 #######
+h = int (a/3600)
+m = (a - (h*3600)) / 60
+s = (a - (h*3600)) % 60
+
+print( "%d시간 %d분 %d초" % (h, m, s))
+
+####### 3번 문제 #######
+a = str(input("x와y의 좌표를 입력하세요: "))
+a = a.split()
+x = int(a[0])
+y = int(a[1])
+
+if ( 0 < x and 0 < y ):
+    print("1")
+elif ( 0 < x and 0 > y ):
+    print("4")
+elif ( 0 > x and 0 < y ):
+    print("2")
+elif ( 0 > x and 0 > y ):
+    print("3")
+elif ( 0 == x or 0 == y ):
+    print("x좌표나 y좌표는 0이 될 수 없습니다.")
+    
+####### 4번 문제 #######
+## 변수 선언 ##
+e = 0
+num2 = 1
+num3 = 4
+
+## 실행 부분 ##
+while e<3 :
+    for i in range(1, 10):
+        
+        for k in range(num2, num3):
+            print(k,"*",i,"=", k*i, end="\t")
+            
+        print()
+        
+    print("\n")
+    e += 1
+    num2 += 3
+    num3 += 3
+    
+####### 5번 문제 #######
+
+a = int(input("첫 줄의 별 갯수를 입력하세요: "))
+for b in range(a, 1, -2):
+    print(" "*int((a - b)/2), "*"*b)
+
+print(" "*int(((a-b)/2)+1), "*")
