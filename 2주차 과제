@@ -1,0 +1,138 @@
+####### 1번 문제 ######
+A = int(input(""))
+if ( 1 > A or A > 1000000 ):
+    print("주어진 정수 A의 개수: 1 ~ 1000000")
+else:
+    a = list(map(int, input().split()))
+    if ( len(a) > A or A > len(a)):
+        print("입력한 정수의 갯수가 주어진 정수 갯수와 맞지 않습니다.")
+    else:
+        print(min(a),max(a))
+
+####### 2번 문제 #######
+A = int(input(""))
+
+for b in range(A):
+    a = str(input(""))
+    d = 0
+    e = 0
+    for i in a:
+        if i == "O":
+            d += 1
+            e += d
+        else:
+            d = 0
+            
+    print(e)
+
+###### 3번 문제 ######
+Class = int(input(""))
+
+for A in range (Class):
+    grade = list(map(int,input("").split()))
+
+    if (grade[0] + 1 < len(grade) or grade[0] + 1 > len(grade)):
+         print("갯수가 안 맞습니다. 다시 실행 해주세요.")
+         break
+    else:
+        b = 0
+        total = 0
+        for i in range(1, grade[0] + 1):
+            grade[i]
+            b += grade[i]
+        total = b / grade[0]
+        c = 0
+        percentage = 0
+        for C in grade:
+            if C > total:
+                c += 1
+                percentage = (c / grade[0]) * 100
+        print("%0.3f" %percentage + "%")
+        
+###### 4번 문제 ######
+a = int(input(""))
+
+print(" "*int(a-1), "*", "\n")
+print(" "*int(a-2), "*", "*", "\n")
+
+c= 1
+for A in range(3, a+1, 1):
+    print(" "*int(a - A), "*", " "*int(c), "*", "\n")
+    c += 2
+
+###### 5번 문제 ######
+## 변수 부분 ##
+b = 9
+c = 3
+d = 5
+e = "***** "
+f = 2
+g = 1
+h = 3
+i = 6
+j = 4
+k = 10
+l = 4
+m = 11
+n = 4
+o = 16
+p = 17
+q = 18
+r = 1
+s = 12
+B = 6
+C = 3
+D = 15
+E = 1
+F = 13
+G = "*****"
+## 실행 부분 ##
+a = int(input(""))
+
+print(" "*int(a-1), "*\n")
+print(" "*int(a-2), "*", "*\n")
+print(" "*int(a-3), "*"*5, "\n")
+
+
+for A in range(4, a+1, 1):
+    if A == B:
+        print(" "*int(a - (A)), e*f, "\n")
+        f *= 2
+        B *= 2
+    elif A == d:
+        print(" "*int(a - (A)), "* *", " "*g, "* *", "\n")
+        d += h
+        h *= 2
+        g += h
+    elif A == b:
+        print(" "*int(a - (A)), e, " "*j, e, "\n")
+        b += i
+        i += 6
+        j += s
+        s *= 2
+    elif A == k:
+        print(" "*int(a - (A)), "*     "*l, "\n")
+        k += 12
+        l *= 2
+    elif A == m:
+        print(" "*int(a - (A)), "* *   "*n, "\n")
+        m += 12
+        n *= 2
+    elif A == o:
+        print(" "*int(a - (A)), "*", " "*C, "*"," "*D, "*", " "*C, "*", "\n")
+        o += 3
+        C += 6
+        D -= 6
+    elif A == p:
+        print(" "*int(a - (A)), "* *"," "*E,"* *", " "*F, "* *"," "*E, "* *", "\n")
+        p += 3
+        E += 6
+        F -= 6
+    elif A == 18:
+        print(" "*int(a - (A)), G,G," "*11, G,G, "\n")
+    elif A == 21:
+        print(" "*int(a - (A)), e, " "*4,e, " "*4,e," "*4,e, "\n")
+        
+    else:
+        print(" "*int(a - (A)), "*", " "*int(c), "*\n")
+    c += 2
