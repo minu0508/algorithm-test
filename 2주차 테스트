@@ -1,0 +1,55 @@
+###### 1번 문제 ######
+print("처음에 입력하실 때 1 ~ 100 사이를 입력하여 주세요.")
+
+A = int(input())  
+B = list(map(int,input()))
+C = 0
+
+if len(B) != A:
+    print("첫 번째 숫자 != 두 번째 숫자들의 갯수")
+    
+else:
+    for i in range (0, len(B), 1):
+        C += B[i]
+    print(C)
+    
+###### 2번 문제 ######
+b = []
+c = 0
+while True:
+    a = list(map(float, input().split()))
+    if (a[0] == 999):
+        break
+    else:
+        b.extend(a)
+        
+for i in range(0, len(b) - 1, 1):
+    c = b[i+1] - b[i]
+    print("%.2f" %c)
+
+###### 3번 문제 ######
+B = ['Equilateral', 'Invalid', 'Isosceles', 'Scalene']
+C = []
+
+while True:
+    A = list(map(int, input().split()))
+    A.sort()
+
+    if A[0] + A[1] <= A[2]:
+        C.append(B[1])
+
+    elif A[0] + A[1] >= A[2]:
+        
+        if A[0] == A[1] == A[2]:
+            C.append(B[0])
+            
+        elif A[0]== A[1] or A[0] == A[2] or A[1] == A[2]:
+            C.append(B[2])
+            
+        else:
+            C.append(B[3])
+    if A[0] == A[1] == A[2] == 0:
+        break
+
+for a in range (0, len(C) - 1, 1):
+    print(C[a])
