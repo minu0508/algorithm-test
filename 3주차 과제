@@ -1,0 +1,62 @@
+###### 1번 문제 ######
+A = list(map(int, input()))
+A.sort()
+
+for i in range((len(A) - 1), -1, -1):
+    print(A[i], end = '')
+
+###### 2번 문제 ######
+A = int(input())
+a = []
+
+for I in range(A):
+    b = int(input())
+    a.append(b)
+    a.sort()
+
+for B in range(A):
+    print(a[B])
+
+###### 3번 문제 ######
+a = int(input())
+b = []
+
+for A in range(a):
+    b.append(input())
+    b.sort(key = len)
+
+c = sorted(b, key = lambda x :x[1] )
+
+for B in range(a):
+    print(c[B])
+
+###### 4번 문제 ######
+a = int(input())
+c = []
+d = 0
+
+for A in range(a):
+    b = input()
+    c.append(b)
+
+c = list(set(c))
+c = sorted(c, key = lambda x: [len(x), x])
+
+
+for B in range (0, len(c), 1):
+    print(c[B])
+
+###### 5번 문제 ######
+D =[]
+A = int(input())
+
+if (1 > A or A > 100000):
+    print("범위(1<= A <= 100000)")
+else:
+    for B in range(A):
+        C = list(map(int, input().split()))
+        D.append(C)
+D = sorted(D, key = lambda x: (x[0], x[1]))
+
+for E in range (A):
+    print(D[E])
