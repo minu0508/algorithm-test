@@ -87,4 +87,73 @@ while Q != A:
 for k in range(len(E)):
         print(E[k])
                 
-###### 4번 문제 ###### - 수정중
+###### 4번 문제 ######
+A = int(input())
+B = []
+C = []
+D = 1
+for i in range(A):
+    B.append(D)
+    D += 1
+
+for j in range(len(B)-1, -1, -1):
+    C.append(B[j])
+
+
+while len(C) != 1:
+    C.pop()
+    C.insert(0, C.pop())
+
+print(C)
+
+###### 5번 문제 ######
+A = int(input())
+stack = []
+C = []
+D = 0
+
+for i in range(A):
+    B = []
+    B = list(input().split())
+
+    if B[0] == 'push_front':
+        stack.insert(0, B[1])
+
+    if B[0] == 'push_back':
+        stack.append(B[1])
+
+    if B[0] == 'front':
+        if len(stack) != 0:
+            C.append(stack[0])
+        else:
+            C.append(-1)
+
+    if B[0] == 'back':
+        if len(stack) != 0:
+            C.append(stack[len(stack)-1])
+        else:
+            C.append(-1)
+
+    if B[0] == 'size':
+        C.append(len(stack))
+
+    if B[0] == 'empty':
+        if len(stack) == 0:
+            C.append(1)
+        else:
+            C.append(0)
+
+    if B[0] == 'pop_front':
+        if len(stack) != 0:
+            C.append(stack.pop(D))
+        else:
+            C.append(-1)
+
+    if B[0] == 'pop_back':
+        if len(stack) != 0:
+            C.append(stack.pop())
+        else:
+            C.append(-1)
+
+for j in range(0, len(C), 1):
+    print(C[j])
