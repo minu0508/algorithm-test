@@ -1,0 +1,90 @@
+###### 1번 문제 #######
+A = int(input())
+stack = []
+C = []
+
+for i in range(A):
+    B = []
+    B = list(input().split())
+
+    if B[0] == 'push':
+        stack.append(B[1])
+
+    if B[0] == 'pop':
+        if len(stack) != 0:
+            C.append(stack.pop())
+        else:
+            C.append(-1)
+
+    if B[0] == 'size':
+        C.append(len(stack))
+
+    if B[0] == 'empty':
+        if len(stack) == 0:
+            C.append(1)
+        else:
+            C.append(0)
+
+    if B[0] == 'top':
+        if len(stack) != 0:
+            C.append(stack[len(stack)-1])
+        else:
+            C.append(-1)
+
+for j in range(0, len(C), 1):
+    print(C[j])
+
+###### 2번 문제 ######
+A = int(input())
+B = []
+total = 0
+
+for i in range(A):
+    C = int(input())
+
+    if C == 0:
+        B.pop()
+    else:
+        B.append(C)
+
+for j in range(0, len(B), 1):
+    total += B[j]
+
+print(total)
+
+###### 3번 문제 ######
+A = int(input())
+C = []
+D = []
+E = []
+F = []
+G = 0
+Q = 0
+
+for i in range(A):
+        B = int(input())
+        C.append(B)
+        
+for j in range(C[0]):
+        E.append('+')
+        G += 1
+        D.append(G)
+        
+while Q != A:
+
+        if C[Q] == D[len(D)-1]:
+                D.pop()
+                E.append('-')
+                Q += 1
+                print("NO")
+
+
+        else:
+                G += 1
+                D.append(G)
+                E.append('+')
+                
+for k in range(len(E)):
+        print(E[k])
+                
+###### 4번 문제 ###### - 수정중
