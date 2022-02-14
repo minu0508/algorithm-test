@@ -1,0 +1,42 @@
+###### 1번 문제 ######
+C = []
+D = []
+
+while True:
+    A = list(map(str, input()))
+    B = []
+    
+    if A[0] == '.':
+        break
+
+    elif A[len(A) - 1] == '.':
+        for i in A:
+            if i == '('or i == '[':
+                B.append(i)
+
+            elif i == ')':
+                if len(B) == 0 or B[len(B) - 1] != '(' or B[len(B) - 1] == '[':
+                    C.append("NO")
+                    break
+                else:
+                    C.append("YES")
+                    B.pop()
+                    break
+                        
+            elif i == ']':
+                if len(B) == 0 or B[len(B) - 1] != '[' or B[len(B) - 1] == '(':
+                    C.append("NO")
+                    break
+                else:
+                    C.append("YES")
+                    B.pop()
+                    break
+
+        else:
+            C.append("YES")
+
+    else:
+        C.append("NO")
+
+for j in range(0, len(C), 1):
+    print(C[j])
